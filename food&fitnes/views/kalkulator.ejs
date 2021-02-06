@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food&Fitness</title>
+    <!-- CDNS  -->
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/namirnice.css">
+    <link rel="stylesheet" href="/stylesheets/kalkulator.css">
+</head>
+
+<body>
+
+<header class="header">
+    <nav id="header" class="navbar  navbar-expand-lg navbar-light  w-100 d-flex justify-content-lg-center m-0 p-0">
+        <div class="navbar-brand m-0 py-2">
+            <a href="/index"><img id="logo" class="nav__logo " src="/images/text.png" alt=""></a>
+        </div>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <ul class="nav__list collapse navbar-collapse d-lg-flex justify-content-lg-center pl-0"
+            id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
+                <li class="nav__list-item nav-item nav-link ml-0 pl-0">
+                    <a class="nav__anchor-link" href="/namirnice">Namirnice</a>
+
+                </li>
+                <li class="nav__list-item nav-item nav-link "><a class="nav__anchor-link"
+                                                                 href="/dnevnik">Dnevnik</a></li>
+                <li class="nav__list-item nav-item nav-link active"><a class="nav__anchor-link"
+                                                                       href="/kalkulator">Kalkulator</a></li>
+
+            </div>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="mt-5 pt-5">
+    <section id="bmr-section" class="mt-5 py-5 d-flex justify-content-center align-items-center flex-column">
+        <h1>Ritam bazalnog metabolizma</h1>
+        <span class="container"><b>BMR (ritam bazalnog metabolizma) je broj koji pokazuje iznos minimalne energije
+                    (kalorija) koja je potrebna da bi telo obavljalo osnovne funkcije: da bi se disalo, da bi se
+                    održavala cirkulacija krvi i temperatura tela.
+                    Za grubo izračunavanje visine BMR potrebna su četiri podatka: pol, godine, visina i
+                    težina.</b></span>
+
+        <div class="container1 container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>BMR za žene</h1>
+                    <input id="ženskoTežina" type="number" min="15" placeholder="Težina (kg)" />
+                    <input id="ženskoVisina" type="number" min="15" placeholder="Visina (cm)" />
+                    <input id="ženskoGodine" type="number" min="7" placeholder="Broj Godina" />
+                    <a id="potvrdiZ" class="button1">Izračunaj</a>
+                    <div class="pt-2">
+                        <span>Rezultat:</span>
+                        <span id="rezultatZ"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>BMR za muškarce</h1>
+
+                    <input id="muškoTežina" type="number" min="15" placeholder="Težina (kg)" />
+                    <input id="muškoVisina" type="number" min="15" placeholder="Visina (cm)" />
+                    <input id="muškoGodine" type="number" min="7" placeholder="Broj Godina" />
+                    <a id="potvrdiM" class="button1">Izračunaj</a>
+                    <div class="pt-2">
+                        <span>Rezultat:</span>
+                        <span id="rezultatM"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Ovde možete izračunati bmr žene</h1>
+                        <p>Za bmr muškarca, kliknite na dugme ispod</p>
+                        <a class="ghost button1" id="signIn">Bmr muškarca</a>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Ovde možete izračunati bmr za muškarca</h1>
+                        <p>Za bmr žene, kliknite na dugme ispod</p>
+                        <a class="ghost button1" id="signUp">Bmr žene</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <div id="izracunajbmi" class="button1">Izračunaj BMI</div>
+        </div>
+    </section>
+
+    <section id="bmi-section" class="mt-5 py-5 d-none justify-content-center align-items-center flex-column ">
+        <h1>Ovde možete izračunati Vas BMI</h1>
+        <b class="mb-3">Indeks telesne mase je metoda izračuna uhranjenosti. BMI se izračunava vrlo jednostavno,
+            a temelji se na odnosu telesne težine i visine osobe.</b>
+        <div class="container1 container" id="container">
+
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Izracunajte BMI</h1>
+                    <input id="bmi-tezina" type="number" min="15" placeholder="Težina (kg)" />
+                    <input id="bmi-visina" type="number" min="15" placeholder="Visina (cm)" />
+                    <a id="potvrdiBmi" class="button1">Izračunaj</a>
+                    <div class="pt-2">
+
+                    </div>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right ">
+                        <img id="bmislika" src="/images/1231.png" alt="">
+                    </div>
+                    <div id="rezultatbmi"class="overlay-panel overlay-right flex-row align-items-end m-0 d-none">
+                        <span>Vaš BMI je <span id="bmirez"></span > i vi <span id="bmitez"></span></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <div id="izracunajbmr" class="button1">Izračunaj BMR</div>
+        </div>
+    </section>
+</main>
+
+
+
+<footer>
+    <div class="row m-0 mt-5 p-5">
+        <div class="container d-flex justify-content-center">
+            <span>Copyright &copy; 2021 Food&Fitness Inc. Sva prava zadržana.</span>
+        </div>
+    </div>
+</footer>
+<script src="/javascripts/formToggle.js"></script>
+<script src="/javascripts/search.js"></script>
+<script src="/javascripts/kalkulator.js"></script>
+<!-- CDNS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

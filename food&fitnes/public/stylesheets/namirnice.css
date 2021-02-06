@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(255, 248, 236)
+}
+
+#header,nav{
+    position: relative;
+    background-color: white;
+}
+
+.form{
+    display: none;
+}
+
+.form-group>input[type="number"],.form-group>input[type="text"]{
+    width: 500px;
+}
+
+#forma{
+    display: none;
+}
+

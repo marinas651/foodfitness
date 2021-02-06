@@ -1,0 +1,8 @@
+{
+  "food&fitnes": {
+    "dbConfig": {
+      "dbAddress":"mongodb+srv://admin:admin123@cluster0.kdddf.mongodb.net/food&fitnes?retryWrites=true&w=majority"
+
+    }
+  }
+}

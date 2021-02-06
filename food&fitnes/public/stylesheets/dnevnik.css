@@ -1,0 +1,22 @@
+.unesi__obrok{
+    width: 100%;
+    background-color:#5dbe7b;
+  
+    
+}
+.unesi__obrok td{
+    padding:15px;
+}
+
+.calories{
+    width: 150px;
+}
+.thead-green
+{
+ /* background-color: #5dbe7c9f; */
+ background-color: rgba(212, 212, 212, 0.685);
+}
+
+.unesi__obrok a{
+    color:white!important;
+}
